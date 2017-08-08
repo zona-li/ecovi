@@ -1,0 +1,11 @@
+{% extends "main/header.html" %}
+
+{% block content %}
+	<h3>{{contractor.name}}</h3>
+	<h6>Contact information:</h6>
+	{{contractor.contactInfo}}
+	<h6>Specialties:</h6>
+	{{ contractor.specialties|safe|linebreaks }}
+	<h6>Ratings:</h6>
+	{{ contractor.ratings|safe|linebreaks }}
+{% endblock %}

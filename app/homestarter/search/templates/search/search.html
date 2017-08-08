@@ -1,0 +1,7 @@
+{% extends "main/header.html" %}
+
+{% block content %}
+	{% for constractor in object_list %}
+		<h5><a href="/search/{{constractor.id}}">{{constractor.name}}</a><br/>{{ constractor.contactInfo }}</h5>
+	{% endfor %}
+{% endblock %}
