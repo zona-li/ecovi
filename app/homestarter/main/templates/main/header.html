@@ -6,8 +6,9 @@
 	<meta charset="utf-8" />
 	{% load static %}
 	<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" type = "text/css"/>
-	<meta name="viewport" content = "width=device-width, initial-scale=1.0">
-	
+	<meta name="viewport" content = "width=device-width, initial-scale=1">
+	<meta name="google-site-verification" content="Xy30mKekcnRElTlzT4GXMUUKZu7jYX3UXipAegmj3-I">
+
 	<style type="text/css">
 		html,
 		body {
@@ -19,10 +20,13 @@
 <body class="body" style="background-color:#ffffff">
 	<div class="container-fluid" style="min-height:95%; ">
 		<div class="row">
-			<center>
-				<h3>Welcome to Homelyfit</h3>
-			</center>
-		</div><hr>
+			<h3 class="text-left">LOGO</h3>
+			<button type="button" class="btn btn-link" autofocus>Contractors</button>
+			<button type="button" class="btn btn-link">Homeowners</button>
+			<button type="button" class="btn btn-link">Login</button>
+		</div>
+		
+		<hr>
 
 		<div class="row">
 		  <div class="col-sm-2">
@@ -49,9 +53,18 @@
 		  </div>
 		</div> 
 	</div>
+
+	<hr>
+
 	<footer>
-		<div class="container-fluid" style='margin-left:15px'>
-			<p><a href="#" target="blank">Contact</a> | <a href="#" target="blank">LinkedIn</a> | <a href="#" target="blank">Twitter</a> | <a href="#" target="blank">Google+</a></p>
+		<div class="container" style='margin-left:15px'>
+			<p>© 2017 Pentagon, LLC. 
+				<img src="{% static "/pictures/linkedin_logo.png" %}" alt="Responsive image" class="img-circle" width="30" height="30"> 
+				<a href='/'>LinkedIn</a> 
+				<img src="{% static "/pictures/facebook-logo.png" %}" alt="Responsive image" class="img-circle" width="30" height="30"><a href='/'>Facebook</a> 
+				<img src="{% static "/pictures/instagram_logo.png" %}" alt="Responsive image" class="img-circle" width="30" height="30">
+				<a href='/'>Instagram</a> 
+			</p>
 		</div>
 	</footer>	
 	
