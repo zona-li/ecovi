@@ -1,8 +1,11 @@
 {% extends "main/header.html" %}
+{% load static %}
 
 {% block content %}
-<p>Who are we</p>
+	<div class="container">
+		<img src="{% static "/pictures/home_pic.jpg" %}" alt="Responsive image">
+	</div>
 
-<!-- "includes" folder contains short code snippets that are included in this webpage -->
-{% include "main/includes/contactInfo.html" %}
+	<!-- "includes" folder contains short code snippets that are included in this webpage -->
+	<!-- {% include "main/includes/contactInfo.html" %} -->
 {% endblock %}
