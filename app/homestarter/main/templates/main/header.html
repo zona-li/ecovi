@@ -23,42 +23,29 @@
 			<div class="col-xs-12 col-md-8">
 				<h3>LOGO</h3>
 			</div>
-				<div class="col-md-1 text-center" autofocus style="margin-top: 1cm;">
-					<a href='/'>home</a>
-				</div>
-				<div class="col-md-1 text-center" style="margin-top: 1cm;">
-					<a href='/search/'><button type="button" class="btn btn-link">Contractors</button></a>
-				</div>
-				<div class="col-md-1 text-center" style="margin-top: 1cm;">
-					<button type="button" class="btn btn-link">Homeowners</button>
-				</div>
-				<div class="col-md-1 text-center" style="margin-top: 1cm;">
-					<button type="button" class="btn btn-link">Login</button>
-				</div>
+			<div class="col-md-1 text-center" autofocus style="margin-top: 1cm;">
+				<a href='/'>home</a>
+			</div>
+			<div class="col-md-1 text-center" style="margin-top: 1cm;">
+				<a href='/search/'><button type="button" class="btn btn-link">Contractors</button></a>
+			</div>
+			<div class="col-md-1 text-center" style="margin-top: 1cm;">
+				<button type="button" class="btn btn-link">Homeowners</button>
+			</div>
+			<div class="col-md-1 text-center" style="margin-top: 1cm;">
+				<button type="button" class="btn btn-link">Login</button>
+			</div>
 		</div>
 		
 		<hr>
 
 		<div class="row">
-		  <div class="col-sm-2">
-		  <br>
-
-		  <br>
-			<!-- <div class="well bs-sidebar" id="sidebar" style="background-color:#fff">
-			  <ul class="nav nav-pills nav-stacked">
-				<li><a href='/'>Home</a></li>
-			  </ul>
-			</div>  -->
+		  <div class="col-md-4">
+		  	{% block content %}
+			{% endblock %}
 		  </div> 
-		  <div class="col-sm-10">
-		  
-			<div class='container-fluid'>
-			<br><br>
-			   {% block content %}
-			   {% endblock %}	
-			</div>
-		  </div>
-		</div> 
+			   	
+		</div>
 	</div>
 
 	<hr>

@@ -11,7 +11,7 @@ def linkedin(request):
 	return redirect('https://www.linkedin.com/company-beta/11119216/')
 
 def facebook(request):
-	return redirect('https://www.facebook.com/')
+	return redirect('https://www.facebook.com/HomelyFit-501081020234805/')
 
 def instagram(request):
 	return redirect('https://www.instagram.com/homelyfit/')
