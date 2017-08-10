@@ -14,39 +14,56 @@
 		body {
 		  height:100%
 		}
+		.bg {
+			/* The image used */
+			background-image: url("{% static "/pictures/home_background.png" %}");
+
+			/* Full height */
+			height: 100%; 
+
+			/* Center and scale the image nicely */
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+		
 	</style>
 </head>
 
 <body class="body" style="background-color:#ffffff">
-	<div class="container-fluid" style="min-height:95%; ">
-		<div class="row">
-			<div class="col-xs-12 col-md-8">
-				<h3>LOGO</h3>
+	<div class="bg">
+		<!-- <img src="{% static "/pictures/home_background.png" %}"> -->
+		<div class="container-fluid" style="min-height:95%; ">
+			<div class="row">
+				<div class="col-xs-12 col-md-8">
+					<h3>LOGO</h3>
+				</div>
+				<div class="col-md-1 text-center" autofocus style="margin-top: 1cm;">
+					<a href='/'>home</a>
+				</div>
+				<div class="col-md-1 text-center" style="margin-top: 1cm;">
+					<a href='/search/'><button type="button" class="btn btn-link">Contractors</button></a>
+				</div>
+				<div class="col-md-1 text-center" style="margin-top: 1cm;">
+					<button type="button" class="btn btn-link">Homeowners</button>
+				</div>
+				<div class="col-md-1 text-center" style="margin-top: 1cm;">
+					<a href='/accounts/login/'><button type="button" class="btn btn-link">Login</button></a>
+				</div>
 			</div>
-			<div class="col-md-1 text-center" autofocus style="margin-top: 1cm;">
-				<a href='/'>home</a>
-			</div>
-			<div class="col-md-1 text-center" style="margin-top: 1cm;">
-				<a href='/search/'><button type="button" class="btn btn-link">Contractors</button></a>
-			</div>
-			<div class="col-md-1 text-center" style="margin-top: 1cm;">
-				<button type="button" class="btn btn-link">Homeowners</button>
-			</div>
-			<div class="col-md-1 text-center" style="margin-top: 1cm;">
-				<button type="button" class="btn btn-link">Login</button>
-			</div>
-		</div>
-		
-		<hr>
+			
+			<hr>
 
-		<div class="row">
-		  <div class="col-md-4">
-		  	{% block content %}
-			{% endblock %}
-		  </div> 
-			   	
+			<div class="row">
+			  <div class="col-md-4">
+			  	{% block content %}
+				{% endblock %}
+			  </div> 
+				   	
+			</div>
 		</div>
 	</div>
+	
 
 	<hr>
 
