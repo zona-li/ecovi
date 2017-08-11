@@ -30,16 +30,15 @@
 	</style>
 </head>
 
-<body class="body" style="background-color:#ffffff">
+<body>
 	<div class="bg">
-		<!-- <img src="{% static "/pictures/home_background.png" %}"> -->
 		<div class="container-fluid" style="min-height:95%; ">
 			<div class="row">
 				<div class="col-xs-12 col-md-8">
 					<h3>LOGO</h3>
 				</div>
 				<div class="col-md-1 text-center" autofocus style="margin-top: 1cm;">
-					<a href='/'>home</a>
+					<a href='/'><button type="button" class="btn btn-link">Home</button></a>
 				</div>
 				<div class="col-md-1 text-center" style="margin-top: 1cm;">
 					<a href='/search/'><button type="button" class="btn btn-link">Contractors</button></a>
@@ -52,7 +51,6 @@
 				</div>
 			</div>
 			
-			<hr>
 
 			<div class="row">
 			  <div class="col-md-4">
@@ -62,29 +60,28 @@
 				   	
 			</div>
 		</div>
+		
+		<footer>
+			<div class="container">
+				<p class="text-uppercase text-center" style="color: #A9A9A9">© Pentagon LLC 2017  |  
+					<a href='/contact/'>Contact us</a>
+					<a href='/linkedin/' style="margin-left: 20px">
+						<img src="{% static "/pictures/linkedin_logo_bw.png" %}" alt="Responsive image" class="img-circle" width="30" height="30" style='margin-right:15px'> 
+					</a> 
+					<a href='/facebook/'>
+						<img src="{% static "/pictures/facebook_logo_bw.png" %}" alt="Responsive image" class="img-circle" width="30" height="30" style='margin-right:15px'>
+					</a> 
+					<a href='/instagram/'>
+						<img src="{% static "/pictures/ins_logo_bw.png" %}" alt="Responsive image" class="img-circle" width="30" height="30">
+					</a> 
+				</p>
+			</div>
+		</footer>	
+
 	</div>
 	
 
-	<hr>
-
-	<footer>
-		<div class="container" style='margin-left:15px'>
-			<p>© 2017 Pentagon, LLC. 
-				<a href='/linkedin/'>
-					<img src="{% static "/pictures/linkedin_logo.png" %}" alt="Responsive image" class="img-circle" width="30" height="30" style='margin-right:15px'> 
-				</a> 
-				<a href='/facebook/'>
-					<img src="{% static "/pictures/facebook_logo.png" %}" alt="Responsive image" class="img-circle" width="30" height="30" style='margin-right:15px'>
-				</a> 
-				<a href='/instagram/'>
-					<img src="{% static "/pictures/instagram_logo.png" %}" alt="Responsive image" class="img-circle" width="30" height="30">
-				</a> 
-			</p>
-			<p>
-				<a href='/contact/'>Contact</a>
-			</p>
-		</div>
-	</footer>	
+	
 	
 </body>
 
