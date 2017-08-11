@@ -7,5 +7,4 @@ urlpatterns = [
 	url(r'^linkedin/$', views.linkedin, name='linkedin'),
 	url(r'^facebook/$', views.facebook, name='facebook'),
 	url(r'^instagram/$', views.instagram, name='instagram'),
-	url(r'^profile/', views.profile, name='profile'), 
 ]

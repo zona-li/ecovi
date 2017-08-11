@@ -33,6 +33,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'main',
     'search',
+    'homeowners',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -128,3 +129,5 @@ STATIC_URL = '/static/'
 
 # Redirect to profile page URL after login
 LOGIN_REDIRECT_URL = '/profile/'
+
+
