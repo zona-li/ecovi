@@ -80,9 +80,9 @@ WSGI_APPLICATION = 'homestarter.wsgi.application'
 DATABASES = {
         'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'pentagon',
+        'NAME': 'homelyfit',
         'USER': 'www',
-        'PASSWORD': '$3cureUS',
+        'PASSWORD': 'pGznqf#h2s',
         'HOST': 'db',
         }
 }
