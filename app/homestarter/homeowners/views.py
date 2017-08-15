@@ -11,7 +11,10 @@ def signup(request):
             raw_password = form.cleaned_data.get('password')
             user = authenticate(username=username, password=raw_password)
             login(request, user)
-            return redirect('/signup_confirm/')
+            return redirect('/homeowners/signup_confirm/')
     else:
         form = SignUpForm()
     return render(request, 'signup.html', {'form': form})
+
+def signup_confirm(request):
+	return render(request, 'main/home.html')
