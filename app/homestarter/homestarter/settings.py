@@ -130,4 +130,5 @@ STATIC_URL = '/static/'
 # Redirect to home page URL after login
 LOGIN_REDIRECT_URL = '/'
 
-
+# Using the console email backend to debug the code
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
