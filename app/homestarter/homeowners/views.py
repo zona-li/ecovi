@@ -6,6 +6,9 @@ from django.template.loader import render_to_string
 from homeowners.forms import SignUpForm
 from homeowners.tokens import account_activation_token
 from django.http import HttpResponse
+from django.core.mail import send_mail
+
+
 
 def signup(request):
     if request.method == 'POST':
@@ -22,7 +25,7 @@ def signup(request):
                 'uid': urlsafe_base64_encode(force_bytes(user.pk)),
                 'token': account_activation_token.make_token(user),
             })
-            user.email_user(subject, message)
+            send_mail(subject, message, 'zona@homelyfit.com', ['haoyang.zona@gmail.com'], fail_silently=False)
             return redirect('account_activation_sent')
     else:
         form = SignUpForm()

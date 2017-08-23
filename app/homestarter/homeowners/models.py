@@ -11,6 +11,8 @@ class Homeowner(models.Model):
 	contractor = models.ForeignKey(Contractor, on_delete=models.SET_NULL, null=True, blank=True)
 
 # Hook the create_user_profile, save_user_profile, and update_user_profile methods to the User model, whenever a save event occurs.
+# Reference: https://simpleisbetterthancomplex.com/tutorial/2017/02/18/how-to-create-user-sign-up-view.html
+
 @receiver(post_save, sender=User)
 def create_user_profile(sender, instance, created, **kwargs):
     if created:

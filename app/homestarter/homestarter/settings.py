@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/1.10/ref/settings/
 """
 
 import os
+from decouple import config, Csv
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -20,10 +21,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.10/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'lzqb($yl9w_#a+6q_mpy1j2rlw%+b+a07dc_b@h_@q3fn7a08f'
+SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = config('DEBUG', default=True, cast=bool)
+
+# ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
 
 ALLOWED_HOSTS = []
 
@@ -80,10 +83,10 @@ WSGI_APPLICATION = 'homestarter.wsgi.application'
 DATABASES = {
         'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'homelyfit',
-        'USER': 'www',
-        'PASSWORD': 'pGznqf#h2s',
-        'HOST': 'db',
+        'NAME': config('NAME'),
+        'USER': config('DB_USER'),
+        'PASSWORD': config('DB_PASSWORD'),
+        'HOST': config('DB_HOST'),
         }
 }
 
@@ -130,5 +133,18 @@ STATIC_URL = '/static/'
 # Redirect to home page URL after login
 LOGIN_REDIRECT_URL = '/'
 
-# Using the console email backend to debug the code
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+# Sendgrid email setup
+EMAIL_HOST = 'smtp.sendgrid.net'
+EMAIL_HOST_USER = 'sendgrid_zonali'
+EMAIL_HOST_PASSWORD = 'sendgrid_}9J{MgyUnA'
+EMAIL_PORT = config('EMAIL_PORT', cast=int)
+EMAIL_USE_TLS = True
+
+
+
+
+
+
+
+
+

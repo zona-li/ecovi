@@ -1,0 +1,10 @@
+web:
+   container_name: homelyfit_web
+   image: tp33/django
+   external_links:
+      - mysql:db
+   ports:
+      - "8000:8000"
+   volumes:
+      - ~/Desktop/pentagon/app:/app
+   command: bash -c "pip install -r /app/requirements.txt && python /app/homestarter/manage.py makemigrations && python /app/homestarter/manage.py migrate && mod_wsgi-express start-server --working-directory /app/homestarter/ /app/homestarter/homestarter/wsgi.py"
