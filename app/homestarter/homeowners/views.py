@@ -8,6 +8,10 @@ from homeowners.tokens import account_activation_token
 from django.http import HttpResponse
 from django.core.mail import send_mail
 
+# To use Sendgrid
+import sendgrid
+import os
+from sendgrid.helpers.mail import *
 
 
 def signup(request):
@@ -18,14 +22,26 @@ def signup(request):
             user.is_active = False                                          # Change the user.is_active to False, so the user can’t log in before confirming the email address
             user.save()
             current_site = get_current_site(request)
-            subject = 'Activate Your Homelyfit Account'
+            subject = 'Activate Your Pentagon Account'
             message = render_to_string('account_activation_email.html', {
                 'user': user,
                 'domain': current_site.domain,
                 'uid': urlsafe_base64_encode(force_bytes(user.pk)),
                 'token': account_activation_token.make_token(user),
             })
-            send_mail(subject, message, 'zona@homelyfit.com', ['haoyang.zona@gmail.com'], fail_silently=False)
+            ################### Using Sendgrid ###################
+            sg = sendgrid.SendGridAPIClient(apikey=os.environ.get('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'))
+            from_email = Email("haoyang.zona@gmail.com")
+            to_email = Email("haoyang.zona@gmail.com")
+            subject = "Activate Your Pentagon Account"
+            content = Content(message)
+            mail = Mail(from_email, subject, to_email, content)
+            response = sg.client.mail.send.post(request_body=mail.get())
+            print(response.status_code)
+            print(response.body)
+            print(response.headers)
+            ######################################################
+            # send_mail(subject, message, 'zona@homelyfit.com', ['haoyang.zona@gmail.com'], fail_silently=False)
             return redirect('account_activation_sent')
     else:
         form = SignUpForm()
