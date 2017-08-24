@@ -30,7 +30,7 @@ def signup(request):
                 'token': account_activation_token.make_token(user),
             })
             ################### Using Sendgrid ###################
-            sg = sendgrid.SendGridAPIClient(apikey=os.environ.get('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'))
+            sg = sendgrid.SendGridAPIClient(apikey=os.environ.get('API_KEY'))
             from_email = Email("haoyang.zona@gmail.com")
             to_email = Email("haoyang.zona@gmail.com")
             subject = "Activate Your Pentagon Account"
