@@ -7,6 +7,7 @@ from homeowners.forms import SignUpForm
 from homeowners.tokens import account_activation_token
 from django.http import HttpResponse
 from django.core.mail import send_mail
+from decouple import config
 
 # To use Sendgrid
 import sendgrid
@@ -30,11 +31,11 @@ def signup(request):
                 'token': account_activation_token.make_token(user),
             })
             ################### Using Sendgrid ###################
-            sg = sendgrid.SendGridAPIClient(apikey=os.environ.get('API_KEY'))
+            sg = sendgrid.SendGridAPIClient(apikey=os.environ.get('SENDGRID_API_KEY'))
             from_email = Email("haoyang.zona@gmail.com")
             to_email = Email("haoyang.zona@gmail.com")
-            subject = "Activate Your Pentagon Account"
-            content = Content(message)
+            subject = "Testing SendGrid"
+            content = Content("text/plain", "This is the content")
             mail = Mail(from_email, subject, to_email, content)
             response = sg.client.mail.send.post(request_body=mail.get())
             print(response.status_code)
