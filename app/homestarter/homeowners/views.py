@@ -30,24 +30,25 @@ def signup(request):
                 'uid': urlsafe_base64_encode(force_bytes(user.pk)),
                 'token': account_activation_token.make_token(user),
             })
-            ################### Using Sendgrid ###################
-            sg = sendgrid.SendGridAPIClient(apikey=os.environ.get('SENDGRID_API_KEY'))
-            from_email = Email("haoyang.zona@gmail.com")
-            to_email = Email("haoyang.zona@gmail.com")
-            subject = "Testing SendGrid"
-            content = Content("text/plain", "This is the content")
-            mail = Mail(from_email, subject, to_email, content)
-            response = sg.client.mail.send.post(request_body=mail.get())
-            print(response.status_code)
-            print(response.body)
-            print(response.headers)
-            ######################################################
-            # send_mail(subject, message, 'zona@homelyfit.com', ['haoyang.zona@gmail.com'], fail_silently=False)
+            # sendEmail();
+            send_mail(subject, message, 'haoyang.zona@gmail.com', ['haoyang.zona@gmail.com'], fail_silently=False)
             return redirect('account_activation_sent')
     else:
         form = SignUpForm()
     return render(request, 'signup.html', {'form': form})
 
+def sendEmail():
+    ################### Using Sendgrid ###################
+    sg = sendgrid.SendGridAPIClient(apikey=os.environ.get(config('SENDGRID_API_KEY')))
+    from_email = Email("haoyang.zona@gmail.com")
+    to_email = Email("haoyang.zona@gmail.com")
+    subject = "Testing SendGrid"
+    content = Content("text/plain", "This is the content")
+    mail = Mail(from_email, subject, to_email, content)
+    response = sg.client.mail.send.post(request_body=mail.get())
+    print(response.status_code)
+    print(response.body)
+    print(response.headers)
 
 def account_activation_sent(request):
     html = "<html><body>Please confirm your email address to complete the signup.</body></html>"
