@@ -132,11 +132,11 @@ STATIC_URL = '/static/'
 LOGIN_REDIRECT_URL = '/'
 
 # Sendgrid email setup
-EMAIL_HOST = 'smtp.sendgrid.net'
-EMAIL_HOST_USER = 'sendgrid_zonali'
-EMAIL_HOST_PASSWORD = config('SENDGRID_PASSWORD')
-EMAIL_PORT = config('EMAIL_PORT', cast=int)
-EMAIL_USE_TLS = True
+# EMAIL_HOST = 'smtp.sendgrid.net'
+# EMAIL_HOST_USER = 'sendgrid_zonali'
+# EMAIL_HOST_PASSWORD = config('SENDGRID_PASSWORD')
+# EMAIL_PORT = config('EMAIL_PORT', cast=int)
+# EMAIL_USE_TLS = True
 
 
 
