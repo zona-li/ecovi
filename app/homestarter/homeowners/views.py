@@ -7,6 +7,7 @@ from homeowners.forms import SignUpForm
 from homeowners.tokens import account_activation_token
 from django.http import HttpResponse
 from django.core.mail import send_mail
+from django.conf import settings
 from decouple import config
 
 # To use Sendgrid
@@ -23,7 +24,7 @@ def signup(request):
             user.is_active = False                                          # Change the user.is_active to False, so the user can’t log in before confirming the email address
             user.save()
             current_site = get_current_site(request)
-            subject = 'Activate Your Pentagon Account'
+            subject = 'Activate Your EcoVi Account'
             message = render_to_string('account_activation_email.html', {
                 'user': user,
                 'domain': current_site.domain,
@@ -31,7 +32,9 @@ def signup(request):
                 'token': account_activation_token.make_token(user),
             })
             # sendEmail();
-            send_mail(subject, message, 'haoyang.zona@gmail.com', ['haoyang.zona@gmail.com'], fail_silently=False)
+            from_email = settings.EMAIL_HOST_USER
+            to_email = [from_email]
+            send_mail(subject, message, from_email, to_email, fail_silently=False)
             return redirect('account_activation_sent')
     else:
         form = SignUpForm()
