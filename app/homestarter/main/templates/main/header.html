@@ -25,6 +25,21 @@
 			background-position: center;
 			background-repeat: no-repeat;
 			background-size: cover;
+
+			font-family:'Terminal Dosis'; 
+		}
+
+		.row {
+			background-color: rgba(255,255,255,0.3);
+		}
+
+		.btn-link:hover {
+			color: #fff;
+			text-decoration: none;
+		}
+
+		.btn-link {
+			color: #638dae;
 		}
 		
 	</style>
@@ -34,20 +49,21 @@
 	<div class="bg">
 		<div class="container-fluid" style="min-height:95%; ">
 			<div class="row">
-				<div class="col-xs-12 col-md-8">
-					<img src="{% static "/pictures/pentagon_logo.png" %}" alt="Responsive image" width="110" height="110"> 
+				<div class="col-md-1">
+					<img src="{% static "/pictures/pentagon_logo.png" %}" alt="Responsive image" width="65" height="65" style="margin-left: 20px;">
+					<b style="color:#FFFFFF; margin-left: 30px; font-size: 130% ">EcoVi</b>
 				</div>
 				<div class="col-md-1 text-center text-uppercase" autofocus style="margin-top: 1cm;">
-					<a href='/'><button type="button" class="btn btn-link">Home</button></a>
+					<a href='/'><button type="button" class="btn btn-link btn-lg">Home</button></a>
 				</div>
 				<div class="col-md-1 text-center text-uppercase" style="margin-top: 1cm;">
-					<a href='/search/'><button type="button" class="btn btn-link">Contractors</button></a>
+					<a href='/search/'><button type="button" class="btn btn-link btn-lg">Contractors</button></a>
 				</div>
 				<div class="col-md-1 text-center text-uppercase" style="margin-top: 1cm;">
-					<a href='/homeowners/signup/'><button type="button" class="btn btn-link">Homeowners</button></a>
+					<a href='/homeowners/signup/'><button type="button" class="btn btn-link btn-lg">Homeowners</button></a>
 				</div>
 				<div class="col-md-1 text-center text-uppercase" style="margin-top: 1cm;">
-					<a href='/accounts/login/'><button type="button" class="btn btn-link">Sign Up/Login</button></a>
+					<a href='/accounts/login/'><button type="button" class="btn btn-link btn-lg">Sign Up/Login</button></a>
 				</div>
 
 				<!-- {% if user.is_authenticated %}
