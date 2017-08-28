@@ -24,8 +24,7 @@
 			/* Center and scale the image nicely */
 			background-position: center;
 			background-repeat: no-repeat;
-			background-size: cover;
-
+			background-size:100% 100vh;
 			font-family:'Terminal Dosis'; 
 		}
 
@@ -74,14 +73,12 @@
 				{% endif %} -->
 			</div>
 			
-
-			<div class="row">
-			  <div class="col-md-4">
-			  	{% block content %}
+			<span class="row">
+				{% block content %}
 				{% endblock %}
-			  </div> 
+			</span>
+			  	
 				   	
-			</div>
 		</div>
 		
 		<footer>
