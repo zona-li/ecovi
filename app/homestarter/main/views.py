@@ -5,7 +5,7 @@ def index(request):
 	return render(request, 'main/home.html')
 
 def contact(request):
-	return render(request, 'main/basic.html', {'category':['For homeowners: ','For contractors: '], 'products':['remodeling','designing','energy consulting']})
+	return render(request, 'main/basic.html')
 
 def linkedin(request):
 	return redirect('https://www.linkedin.com/company-beta/11119216/')
