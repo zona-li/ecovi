@@ -34,8 +34,8 @@ def signup(request):
             # sendEmail();
             from_email = settings.EMAIL_HOST_USER
             to_email = [from_email]
-            send_mail(subject, message, from_email, to_email, fail_silently=False)
-            return redirect('account_activation_sent')
+            # send_mail(subject, message, from_email, to_email, fail_silently=False)
+            return redirect('/')
     else:
         form = SignUpForm()
     return render(request, 'signup.html', {'form': form})
