@@ -6,8 +6,8 @@
 	<meta charset="utf-8" />
 	{% load static %}
 	<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" type = "text/css"/>
-	<meta name="viewport" content = "width=device-width, initial-scale=1">
-	<meta name="google-site-verification" content="Xy30mKekcnRElTlzT4GXMUUKZu7jYX3UXipAegmj3-I">
+	<meta name="viewport" content = "width=device-width, initial-scale=1" />
+	<meta name="google-site-verification" content="Xy30mKekcnRElTlzT4GXMUUKZu7jYX3UXipAegmj3-I" />
 
 	<style type="text/css">
 		html,
@@ -43,6 +43,7 @@
 		
 	</style>
 </head>
+
 
 <body>
 	<div class="bg">
@@ -83,7 +84,7 @@
 		
 		<footer>
 			<div class="container">
-				<p class="text-uppercase text-center" style="color: #A9A9A9">© Pentagon LLC 2017  |  
+				<p class="text-uppercase text-center" id = "footer_text" style="color: #A9A9A9">© Pentagon LLC 2017  |  
 					<a href='/contact/'>Contact us</a>
 					<a href='/linkedin/' style="margin-left: 20px">
 						<img src="{% static "/pictures/linkedin_logo_bw.png" %}" alt="Responsive image" class="img-circle" width="30" height="30" style='margin-right:15px'> 
@@ -101,8 +102,15 @@
 	</div>
 	
 
-	
+	<script type="text/javascript">
+		// Get the current year for the copyright
+		var date = new Date()
+		var year = date.getFullYear();
+		var el = document.getElementById('footer_text');
+		el.innerHTML = '<p class="text-uppercase text-center" id = "footer_text" style="color: #A9A9A9">© Pentagon LLC ' + year + ' | ' + '</p>';
+	</script>
 	
 </body>
+
 
 </html>
