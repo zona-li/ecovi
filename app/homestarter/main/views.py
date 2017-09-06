@@ -4,7 +4,7 @@ from django.http import HttpResponse
 def index(request):
 	return render(request, 'main/home.html')
 
-def contact(request):
+def about(request):
 	return render(request, 'main/basic.html')
 
 def linkedin(request):
