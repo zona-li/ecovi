@@ -27,8 +27,11 @@
 			background-repeat: no-repeat;
 			background-size:100% 100vh;
 			font-family:'Exo 2'; 
+			padding-top: 40px;
 		}
-
+		.container {
+			padding-top: 10px;
+		}
 		.btn-link:hover {
 			color: #638dae;
 			text-decoration: none;
@@ -58,11 +61,14 @@
 				{% endblock %}
 			</span>				   	
 		</nav>
-				
-		<footer>
-			<div class="container">
-				<p class="text-uppercase text-center" id = "footer_text" style="color: #A9A9A9">© Pentagon LLC 2017  |  
-					<a href='/contact/'>Contact us</a>
+	</div>
+	
+	<footer>
+		<div class="container-fluid"> <!-- If Needed Left and Right Padding in 'md' and 'lg' screen means use container class -->
+            <div class="row">
+                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                    <h5 style="padding-left: 20px;">Follow our community</h5>
+					<br>
 					<a href='/linkedin/' style="margin-left: 20px">
 						<img src="{% static "/pictures/linkedin_logo_bw.png" %}" alt="Responsive image" class="img-circle" width="30" height="30" style='margin-right:15px'> 
 					</a> 
@@ -72,19 +78,28 @@
 					<a href='/instagram/'>
 						<img src="{% static "/pictures/ins_logo_bw.png" %}" alt="Responsive image" class="img-circle" width="30" height="30">
 					</a> 
-				</p>
-			</div>
-		</footer>	
+                </div>
+                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                    <a href='/contact/'>Contact us</a>
+                </div>
+                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                    <p>Company</p>
+                </div>
+            </div>
+        </div>
 
-	</div>
-	
+        <div class="row">
+			<p class="text-uppercase text-center" id = "footer_text" style="color: #A9A9A9">  # Copyright info # </p>
+		</div>
+	</footer>	
+
 
 	<script type="text/javascript">
 		// Get the current year for the copyright
 		var date = new Date()
 		var year = date.getFullYear();
 		var el = document.getElementById('footer_text');
-		el.innerHTML = '<p class="text-uppercase text-center" id = "footer_text" style="color: #A9A9A9">© Pentagon LLC ' + year + ' | ' + '</p>';
+		el.innerHTML = '<p class="text-uppercase text-center" id = "footer_text" style="color: #A9A9A9">Pentagon LLC © ' + year + '</p>';
 	</script>
 	
 </body>
