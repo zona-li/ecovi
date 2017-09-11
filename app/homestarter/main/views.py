@@ -17,4 +17,4 @@ def instagram(request):
 	return redirect('https://www.instagram.com/homelyfit/')
 
 def blog(request):
-	return redirect('https://medium.com/@zonazz56')
+	return redirect('https://medium.com/@zonali')

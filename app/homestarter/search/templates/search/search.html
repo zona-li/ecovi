@@ -1,7 +1,14 @@
 {% extends "main/header.html" %}
-
+{% load static %}
 {% block content %}
-	{% for constractor in object_list %}
-		<h5><a href="/search/{{constractor.id}}">{{constractor.name}}</a><br/>{{ constractor.contactInfo }}</h5>
+	{% for people in object_list %}
+		<h5><a href="/search/{{people.id}}">{{people.name}}</a><br/>{{ people.contactInfo }}</h5>
 	{% endfor %}
+		<div>
+			<img src="{% static "/pictures/ppl_1.png" %}" alt="Responsive image" class="img-circle" width="150" height="150" />
+		</div>
+		<div>
+			<h3></h3>
+		</div>
+	
 {% endblock %}
