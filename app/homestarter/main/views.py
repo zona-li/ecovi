@@ -7,6 +7,12 @@ def index(request):
 def about(request):
 	return render(request, 'main/basic.html')
 
+def product(request):
+	return render(request, 'main/product.html')
+
+def contact(request):
+	return render(request, 'main/includes/contactInfo.html')
+
 def linkedin(request):
 	return redirect('https://www.linkedin.com/company-beta/11119216/')
 
