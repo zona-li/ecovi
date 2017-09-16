@@ -17,9 +17,9 @@ Run: "docker-compose up" in Terminal
 App Structure
 ------------
 
-Project name: homestarter
-Django apps: main, search
-REST API app: api
+* Project name: homestarter
+* Django apps: main, search
+* REST API app: api
 
 
 
