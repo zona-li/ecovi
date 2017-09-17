@@ -3,7 +3,7 @@ from .models import Project
 
 
 # Serializer that map the Model instance to JSON format 
-class ProfileSerializer(serializers.ModelSerializer):
+class ProjectSerializer(serializers.ModelSerializer):
 
 	# Map serializer's fields with the model fields. 
 	class Meta:

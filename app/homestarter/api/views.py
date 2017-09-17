@@ -1,3 +1,13 @@
 from django.shortcuts import render
+from rest_framework import generics
+from .serializers import ProjectSerializer
+from .models import Project
 
-# Create your views here.
+# Define the create behavior of the api
+class CreateView(generics.ListCreateAPIView):
+	queryset = Project.objects.all()
+	serializer_class = ProjectSerializer
+
+	# Save the post data when creating a new project.
+	def perform_create(self, serializer):
+		serializer.save()

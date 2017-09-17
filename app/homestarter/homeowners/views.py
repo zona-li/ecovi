@@ -11,9 +11,9 @@ from django.conf import settings
 from decouple import config
 
 # To use Sendgrid
-import sendgrid
-import os
-from sendgrid.helpers.mail import *
+# import sendgrid
+# import os
+# from sendgrid.helpers.mail import *
 
 
 def signup(request):
