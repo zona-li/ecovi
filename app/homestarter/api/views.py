@@ -11,3 +11,8 @@ class CreateView(generics.ListCreateAPIView):
 	# Save the post data when creating a new project.
 	def perform_create(self, serializer):
 		serializer.save()
+
+# Handle the http GET, PUT and DELETE requests.
+class DetailsView(generics.RetrieveUpdateDestroyAPIView):
+	queryset = Project.objects.all()
+	serializer_class = ProjectSerializer

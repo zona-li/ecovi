@@ -20,7 +20,7 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^', include('main.urls')), 
-     url(r'^', include('api.urls')),
+    url(r'^', include('api.urls')),
     url(r'^search/', include('search.urls')), 
     url(r'^homeowners/', include('homeowners.urls')),
     url(r'^accounts/', include('django.contrib.auth.urls')),

@@ -27,6 +27,22 @@ class ViewTestCase(TestCase):
 			self.project_data,
 			format="json")
 
-	# Test the api has project creation capability.
-	def test_api_can_create_a_bucketlist(self):
+	# Test the api has project post, get, put delete capability.
+	def test_api_can_create_project(self):
 		self.assertEqual(self.response.status_code, status.HTTP_201_CREATED)
+
+	def test_api_can_get_project(self):
+		project = Project.objects.get()
+		response = self.client.get(reverse('details'), kwargs={pk: project.id}, format='json')
+		self.assertEqual(response.status_code, status.HTTP_200_OK)
+		self.assertContains(response, project)
+
+	def test_api_can_update_project(self):
+		change_profile = {'project_name': 'another name'}
+		res = self.client.put(reverse('details', kwargs={'pk': project.id}), change_profile, format='json')
+		self.assertEqual(res.status_code, status.HTTP_200_OK)
+
+	def test_api_can_delete_project(self):
+		project = Project.objects.get()
+		response = self.client.delete(reverse('details', kwargs={'pk': project.id}), format='json', follow=True)
+		self.assertEqual(response.status_code, status.HTTP_204_NO_CONTENT)
