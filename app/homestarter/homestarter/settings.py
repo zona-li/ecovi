@@ -144,11 +144,13 @@ STATIC_URL = '/static/'
 LOGIN_REDIRECT_URL = '/'
 
 # Email setup
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = 'haoyang.zona@gmail.com'
+SERVER_EMAIL = 'haoyang.zona@gmail.com'
 EMAIL_HOST_PASSWORD = config('EMAIL_PASSWORD')
 EMAIL_PORT = config('EMAIL_PORT', cast=int)
-EMAIL_USE_TLS = True
 
 '''
 If using Gmail, need to unlock Captcha to enable Django to send for you.

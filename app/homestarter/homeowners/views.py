@@ -10,10 +10,6 @@ from django.core.mail import send_mail
 from django.conf import settings
 from decouple import config
 
-# To use Sendgrid
-# import sendgrid
-# import os
-# from sendgrid.helpers.mail import *
 
 
 def signup(request):
@@ -31,11 +27,8 @@ def signup(request):
                 'uid': urlsafe_base64_encode(force_bytes(user.pk)),
                 'token': account_activation_token.make_token(user),
             })
-            # sendEmail();
-            from_email = settings.EMAIL_HOST_USER
-            to_email = [from_email]
-            # send_mail(subject, message, from_email, to_email, fail_silently=False)
-            return redirect('/')
+            user.email_user(subject, message)
+            return redirect('account_activation_sent')
     else:
         form = SignUpForm()
     return render(request, 'signup.html', {'form': form})
@@ -54,8 +47,7 @@ def sendEmail():
     print(response.headers)
 
 def account_activation_sent(request):
-    html = "<html><body>Please confirm your email address to complete the signup.</body></html>"
-    return HttpResponse(html)
+    return render(request, 'account_activation_sent.html')
 
 
 def activate(request, uidb64, token):
