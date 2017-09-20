@@ -6,6 +6,7 @@ Features
 ------------
 
 - Search
+- Sign up and sign in with email confirmation
 - List of people to work with and products to buy
 
 Installation
