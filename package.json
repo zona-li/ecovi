@@ -1,10 +1,10 @@
 {
   "name": "pentagon",
   "version": "1.0.0",
-  "description": "",
+  "description": "The website matches local constructors/designers with project owners who want to build or rennovate thier rea estate properties.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lite": "lite-server -c configs/bs-config.json"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,11 @@
   "bugs": {
     "url": "https://github.com/ZonaClark/homestarter/issues"
   },
-  "homepage": "https://github.com/ZonaClark/homestarter#readme"
+  "homepage": "https://github.com/ZonaClark/homestarter#readme",
+  "keywords": [],
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.1.0",
+    "lite-server": "^2.3.0"
+  }
 }

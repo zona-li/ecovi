@@ -13,7 +13,6 @@ Installation
 
 Run: "docker-compose up" in Terminal
 
-
 App Structure
 ------------
 
@@ -26,7 +25,7 @@ App Structure
 Tech Stack
 ------------
 - AWS Elastic Beanstalk. Reasoning: Elastic Beanstalk supports Multi-Container-Environments, auto-scaling, and load balancing. Fast to setup. ECS offer finer control of the scaling and capacity, but is more expensive and has a steeper learning curve.
-
+- Sass
 
 Contribute
 ------------
