@@ -75,7 +75,11 @@
                 </div>
                 <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
                     <h5>Get Updates:</h5>
-                    <input id="emailAddress" type="email" placeholder="Email"><button style="margin-left: 20px;">GO</button>
+
+                    <form method="post">
+                    	{% csrf_token %}
+						<input id="emailAddress" type="email" placeholder="Email"><button type="submit" style="margin-left: 20px;">GO</button>
+                    </form>
                 </div>
                 <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
                     <h5>Company</h5>
