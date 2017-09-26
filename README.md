@@ -1,6 +1,6 @@
 # EcoVi
 
-The website matches local constructors/designers with project owners who want to build or rennovate thier rea estate properties.
+The website matches trustworthy local constructors/designers with project owners who want to build or rennovate thier real estate properties.
 
 Features
 ------------
