@@ -7,9 +7,10 @@ def create_general_user(request):
 	if request.method == 'POST':
 		form = GenUserForm(request.POST)
 		if form.is_valid():
-			email = form.cleaned_data['email']
-			usr_instance = Generaluser.objects.create(email='email')
-			return render(request, 'main/home.html')
+			useremail = form.cleaned_data['email']
+			usr_instance = Generaluser.objects.create(email='useremail')
+			usr_instance.save()
+	return render(request, 'main/home.html')
 
 def index(request):
 	return render(request, 'main/home.html')
