@@ -18,7 +18,7 @@
 		}
 		.bg {
 			min-height: 800px;
-			font-family:'Exo 2'; 
+			font-family:'Exo 2, sans-serif'; 
 			padding-top: 40px;
 		}
 		.container-fluid {
@@ -36,6 +36,7 @@
 		
 		.ft {
 			background-color: #75c3c6;
+			font-family:'Exo 2, sans-serif'; 
 		}
 		
 	</style>
@@ -54,10 +55,12 @@
 			
 							   	
 		</nav>
-		<div class="row">
+		<div style="height: 1000px;">
 			{% block content %}
 			{% endblock %}
 		</div>
+			
+		
 	</div>
 	
 	<footer class="ft">
