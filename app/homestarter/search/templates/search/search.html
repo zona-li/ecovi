@@ -1,14 +1,18 @@
 {% extends "main/header.html" %}
 {% load static %}
 {% block content %}
-	{% for people in object_list %}
+
+	<div style="margin-left: 275px">
+		{% for people in object_list %}
 		<h5><a href="/search/{{people.id}}">{{people.name}}</a><br/>{{ people.contactInfo }}</h5>
-	{% endfor %}
+		{% endfor %}
 		<div>
 			<img src="{% static "/pictures/ppl_1.png" %}" alt="Responsive image" class="img-circle" width="150" height="150" />
 		</div>
 		<div>
 			<h3></h3>
 		</div>
+	</div>
+	
 	
 {% endblock %}

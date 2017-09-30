@@ -2,8 +2,10 @@
 {% load static %}
 
 {% block content %}
-  <h2>Sign up</h2>
-  <form method="post">
+
+  <div style="margin-left: 275px">
+    <h2>Sign up</h2>
+    <form method="post">
     {% csrf_token %}
     {% for field in form %}
       <p>
@@ -15,5 +17,7 @@
       </p>
     {% endfor %}
     <button type="submit">Sign up</button>
-  </form>
+    </form>
+  </div>
+  
 {% endblock %}
