@@ -29,7 +29,9 @@ Application and Data:
 - Python
 - Django
 - Apache Mod_WSGI(Web Server Gateway Interface)
-- AWS Elastic Beanstalk. Reasoning: Elastic Beanstalk supports Multi-Container-Environments, auto-scaling, and load balancing. Fast to setup. ECS offer finer control of the scaling and capacity, but is more expensive and has a steeper learning curve.
+- AWS Elastic Beanstalk.  
+Reasoning: Elastic Beanstalk supports Multi-Container-Environments, auto-scaling, and load balancing. Fast to setup. ECS offer finer control of the scaling and capacity, but is more expensive and has a steeper learning curve.
+- MySQL
 - JavaScript
 - Bootstrap
 - jQuery
@@ -42,7 +44,8 @@ Utilities:
 - Sendgrid: for transactional emails
 
 DevOps:
-- Docker
+- Docker.  
+Reasoning: Portability: it ensures the deployment environment is exactly the same as the development environment. Easy to set up top-level architecture: One invocation of docker-compose will have Docker setup everything - it provides a simple description of how runtime components talk to each other. Docker has its own clustering systems Docker Swarm. Inherent security due to isolation.
 - GitHub
 
 Business Tools:
