@@ -31,7 +31,8 @@ Application and Data:
 - Apache Mod_WSGI(Web Server Gateway Interface)
 - AWS Elastic Beanstalk.  
 Reasoning: Elastic Beanstalk supports Multi-Container-Environments, auto-scaling, and load balancing. Fast to setup. ECS offer finer control of the scaling and capacity, but is more expensive and has a steeper learning curve.
-- MySQL
+- MySQL  
+NoSQL was born with the backdrop of our need to store and process data generated at higher volumes and velocities than ever before. However developers find it increasingly difficult to connect those databases to applications. They need to write glue code to kludge together NoSQL tools, learn a myriad of new languages, and because of the lackage of third party ecosystem, companies need to develop their own operational and visualization tools. The lack of JOINs also led to denormalization, which led to data bloat and rigidity. Startups using NoSQL at first often times found themselves returning back to SQL later on. SQL is a standardize and robust query language. Now it (such as CockroachDB) can do fast ingest and complex queries, it is much more scalable as it is before, and it interfaces on top of Hadoop and Spark so we can use those data processing tools on structured data.
 - JavaScript
 - Bootstrap
 - jQuery
