@@ -5,7 +5,7 @@ RUN apt-get update && \
             python-pip \
             python-dev \
             libmysqlclient-dev \
-	    unattended-upgrades && \
+            unattended-upgrades && \
             rm -r /var/lib/apt/lists/*
 
 RUN pip install --upgrade pip \ 
@@ -19,3 +19,5 @@ ENV LANG=en_US.UTF-8 PYTHONHASHSEED=random \
     MOD_WSGI_USER=www-data MOD_WSGI_GROUP=www-data
 
 WORKDIR /app
+
+EXPOSE 8002
