@@ -50,7 +50,7 @@ Reasoning: Portability: it ensures the deployment environment is exactly the sam
 - GitHub
 
 Business Tools:
-- G-suit
+- G-suite
 - Slack
 - Asana
 
