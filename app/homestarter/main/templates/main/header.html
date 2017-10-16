@@ -39,7 +39,31 @@
 			background-color: #75c3c6;
 			font-family:'Exo 2, sans-serif'; 
 		}
-		
+		.parent {
+			position: relative;
+			top: 0;
+			left: 0;
+			margin-top: 20px;
+		}
+		#inputEmail {
+			border-radius: 20px;
+			border: none;
+			height: 40px;
+			width: 200px;
+			position: relative;
+			top: 0;
+			left: 0;
+		}
+		#emailBtn {
+			border-radius: 20px;
+			height: 40px;
+			width: 60px;
+			border: none;
+			position: absolute;
+			top: 0;
+			left: 130px;
+		}
+
 	</style>
 </head>
 
@@ -83,10 +107,10 @@
                 <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
                     <h5>Get Updates:</h5>
 
-                    <form method="post" action="{% url 'create_general_user' %}">
+                    <form class="parent" method="post" action="{% url 'create_general_user' %}">
                     	{% csrf_token %}
-						<input id="emailAddress" type="email" placeholder="Email">
-						<button type="submit" style="margin-left: 20px;">GO</button>
+						<input id="inputEmail" type="email" placeholder="Email">
+						<button id="emailBtn" class="btn" type="submit" style="margin-left: 20px;">GO</button>
                     </form>
                 </div>
                 <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
