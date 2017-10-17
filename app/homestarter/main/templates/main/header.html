@@ -19,7 +19,7 @@
 		}
 		.bg {
 			min-height: 800px;
-			font-family:'Exo 2, sans-serif'; 
+			font-family:'Exo 2'; 
 			padding-top: 40px;
 		}
 		.container-fluid {
@@ -37,7 +37,7 @@
 		
 		.ft {
 			background-color: #75c3c6;
-			font-family:'Exo 2, sans-serif'; 
+			font-family:'Exo 2'; 
 		}
 		.parent {
 			position: relative;
@@ -47,6 +47,8 @@
 		}
 		#inputEmail {
 			border-radius: 20px;
+			padding-left: 15px;
+			padding-right: 60px;
 			border: none;
 			height: 40px;
 			width: 200px;
@@ -54,14 +56,26 @@
 			top: 0;
 			left: 0;
 		}
+		#inputEmail:focus {
+			outline: none;
+		}
 		#emailBtn {
 			border-radius: 20px;
+			background-color: #CAC3C3;
+			color: white;
+			font-size: 15px;
 			height: 40px;
 			width: 60px;
 			border: none;
 			position: absolute;
 			top: 0;
 			left: 130px;
+		}
+		#emailBtn:hover {
+			background-color: #D1CBCB;
+		}
+		#emailBtn:focus {
+			outline: none;
 		}
 
 	</style>
