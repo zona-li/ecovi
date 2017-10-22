@@ -20,8 +20,29 @@
 		.bg {
 			min-height: 800px;
 			font-family:'Exo 2'; 
-			padding-top: 40px;
+			padding-top: 30px;
 		}
+
+		/*large screen*/
+		.navbar {
+			display: flex;
+			/*border: 10px solid black;*/
+			flex-flow: row wrap;
+			justify-content: space-between;
+		}
+		/*medium screen*/
+		@media all and (max-width: 800px) {
+			.navbar {
+				justify-content: space-around;
+			}
+		}
+		/*small screens*/
+		@media all and (max-width: 500px) {
+			.navbar {
+				flex-direction: column;
+			}
+		}
+		
 		.container-fluid {
 			padding-top: 40px;
 			padding-left: 50px;
@@ -73,9 +94,7 @@
 			left: 130px;
 		}
 		#emailBtn:hover {
-			/*background-color: #02AAB0; */
 			background-position: bottom 70px right 70px;
-			/*background-image: linear-gradient(to right, #77A1D3 0%, #79CBCA 51%, #77A1D3 100%);*/
 			transition-duration: 300ms;
 		}
 		#emailBtn:focus {
@@ -90,15 +109,17 @@
 
 <body>
 	<div class="bg">
-		<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
-			<a class="navbar-brand" href='/' style="color:#aaa; margin-left: 100px; margin-right: 50px; font-size: 180% ">EcoVi</a>
-			<div class="navbar-collapse" id="navbarSupportedContent">
+		<nav class="navbar">
+			<div>
+				<img src="{% static "/pictures/logo.png" %}" alt="LOGO" width="50" height="50"/>
+				<a href='/'>EcoVi</a>
+			</div>
+			<div>
 				<a href='/search/'><button type="button" class="btn btn-link btn-lg">People</button></a>
 				<a href='/product/'><button type="button" class="btn btn-link btn-lg">Products</button></a>
 				<a href='/homeowners/signup/'><button type="button" class="btn btn-link btn-lg">Sign up</button></a>
 			</div>
 			
-							   	
 		</nav>
 		<div style="height: 1000px;">
 			{% block content %}
