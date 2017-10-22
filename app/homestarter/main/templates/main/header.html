@@ -22,7 +22,6 @@
 			font-family:'Exo 2'; 
 			padding-top: 30px;
 		}
-
 		/*large screen*/
 		.navbar {
 			display: flex;
@@ -30,15 +29,18 @@
 			flex-flow: row wrap;
 			justify-content: space-between;
 		}
+		.nav_section {
+			flex: 1;
+		}
 		/*medium screen*/
 		@media all and (max-width: 800px) {
-			.navbar {
+			.nav_section {
 				justify-content: space-around;
 			}
 		}
 		/*small screens*/
 		@media all and (max-width: 500px) {
-			.navbar {
+			.nav_section {
 				flex-direction: column;
 			}
 		}
@@ -54,6 +56,7 @@
 		}
 
 		.btn-link {
+			font-size: 15px;
 			color: #aaa;
 		}
 		
@@ -66,6 +69,11 @@
 			top: 0;
 			left: 0;
 			margin-top: 20px;
+		}
+		#logoname {
+			text-decoration: none;
+			font-size: 25px;
+			margin-right: 30px;
 		}
 		#inputEmail {
 			border-radius: 20px;
@@ -110,14 +118,17 @@
 <body>
 	<div class="bg">
 		<nav class="navbar">
-			<div>
+			<div nav_section>
 				<img src="{% static "/pictures/logo.png" %}" alt="LOGO" width="50" height="50"/>
-				<a href='/'>EcoVi</a>
+				<a id="logoname" href='/'>EcoVi</a>
+				<a class="header-nav" href='/product/'><button type="button" class="btn btn-link btn-lg">FOOD</button></a>
+				<a class="header-nav" href='/product/'><button type="button" class="btn btn-link btn-lg">CLOTHES</button></a>
+				<a class="header-nav" href='/product/'><button type="button" class="btn btn-link btn-lg">HOUSE</button></a>
+				<a class="header-nav" href='/product/'><button type="button" class="btn btn-link btn-lg">EXPERIENCE</button></a>
+
 			</div>
-			<div>
-				<a href='/search/'><button type="button" class="btn btn-link btn-lg">People</button></a>
-				<a href='/product/'><button type="button" class="btn btn-link btn-lg">Products</button></a>
-				<a href='/homeowners/signup/'><button type="button" class="btn btn-link btn-lg">Sign up</button></a>
+			<div nav_section>
+				<a class="header-nav" href='/homeowners/signup/'><button type="button" class="btn btn-link btn-lg">Sign up</button></a>
 			</div>
 			
 		</nav>
