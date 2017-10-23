@@ -8,6 +8,7 @@
 	<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" type = "text/css"/>
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Exo+2">
 	<link rel="stylesheet" href="{% static 'css/animations.css' %}">
+	<link rel="stylesheet" href="{% static 'fa/css/font-awesome.min.css' %}">
 	<meta name="viewport" content = "width=device-width, initial-scale=1" />
 	<meta name="google-site-verification" content="Xy30mKekcnRElTlzT4GXMUUKZu7jYX3UXipAegmj3-I" />
 	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
@@ -28,9 +29,11 @@
 			/*border: 10px solid black;*/
 			flex-flow: row wrap;
 			justify-content: space-between;
+			align-items: center;
 		}
 		.nav_section {
-			flex: 1;
+			display: flex;
+			align-items: center;
 		}
 		/*medium screen*/
 		@media all and (max-width: 800px) {
@@ -111,6 +114,13 @@
 		#emailBtn:active {
 			transform: translateX(-5px);
 		}
+		#like-button {
+			border-left: 2px solid grey;
+			padding-left: 12px;
+		}
+		#like-button:hover {
+			cursor: pointer;
+		}
 	</style>
 </head>
 
@@ -118,7 +128,7 @@
 <body>
 	<div class="bg">
 		<nav class="navbar">
-			<div nav_section>
+			<div class="nav_section">
 				<img src="{% static "/pictures/logo.png" %}" alt="LOGO" width="50" height="50"/>
 				<a id="logoname" href='/'>EcoVi</a>
 				<a class="header-nav" href='/product/'><button type="button" class="btn btn-link btn-lg">FOOD</button></a>
@@ -127,8 +137,9 @@
 				<a class="header-nav" href='/product/'><button type="button" class="btn btn-link btn-lg">EXPERIENCE</button></a>
 
 			</div>
-			<div nav_section>
+			<div class="nav_section">
 				<a class="header-nav" href='/homeowners/signup/'><button type="button" class="btn btn-link btn-lg">Sign up</button></a>
+				<i id="like-button" class="fa fa-2x fa-heart-o not-liked"></i>
 			</div>
 			
 		</nav>
