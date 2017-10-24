@@ -14,12 +14,10 @@
 	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
 
 	<style type="text/css">
-		html,
-		body {
+		html, body {
 		  height:100%
 		}
 		.bg {
-			min-height: 800px;
 			font-family:'Exo 2'; 
 			padding-top: 30px;
 		}
@@ -72,6 +70,15 @@
 			top: 0;
 			left: 0;
 			margin-top: 20px;
+		}
+		.container-standard {
+			display: flex;
+		}
+		.box {
+			background-color: #cc0042;
+		}
+		.middle {
+			background-color: #b20039;
 		}
 		#logoname {
 			text-decoration: none;
@@ -143,7 +150,7 @@
 			</div>
 			
 		</nav>
-		<div style="height: 1000px;">
+		<div>
 			{% block content %}
 			{% endblock %}
 		</div>
