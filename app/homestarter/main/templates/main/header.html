@@ -53,7 +53,7 @@
 		
 		.container-fluid {
 			padding-top: 40px;
-			padding-left: 50px;
+			padding-left: 100px;
 		}
 		.btn-link:hover {
 			transition-duration: 500ms;
@@ -76,6 +76,8 @@
 			left: 0;
 			margin-top: 20px;
 		}
+
+		/* "Our standard" row in homepage */
 		.container-standard {
 			display: flex;
 			border: 2px solid black;
@@ -86,6 +88,8 @@
 		.middle {
 			background-color: #b20039;
 		}
+		/* ------------------------------- */
+
 		#logoname {
 			text-decoration: none;
 			font-size: 25px;
@@ -155,6 +159,11 @@
 			font-size: medium;
 			margin-bottom: 50px;
 			color: #FFFAFA;
+			font-weight: bold;
+		}
+		.ft-sec3 > p {
+			color: #FFFAFA;
+			font-size: 15px;
 		}
 	</style>
 </head>
@@ -189,8 +198,8 @@
 	<footer class="ft">
 		<div class="container-fluid"> <!-- If Needed Left and Right Padding in 'md' and 'lg' screen means use container class -->
             <div class="row">
-                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-                    <h5 style="padding-left: 20px; " class="ft-title">Follow our community</h5>
+                <div class="ft-sec1 col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                    <h5 style="padding-left: 20px; " class="ft-title"><b>Follow our community :</b></h5>
 					<a href='/linkedin/' style="margin-left: 20px">
 						<img src="{% static "/pictures/linkedin_logo_bw.png" %}" alt="Responsive image" class="img-circle" width="30" height="30" style='margin-right:15px'> 
 					</a> 
@@ -201,8 +210,8 @@
 						<img src="{% static "/pictures/ins_logo_bw.png" %}" alt="Responsive image" class="img-circle" width="30" height="30">
 					</a> 
                 </div>
-                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-                    <h5 class="ft-title">Get Updates:</h5>
+                <div class="ft-sec2 col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                    <h5 class="ft-title">Get Updates :</h5>
 
                     <form class="parent" method="post" action="{% url 'create_general_user' %}">
                     	{% csrf_token %}
@@ -210,13 +219,14 @@
 						<button id="emailBtn" class="btn" type="submit" style="margin-left: 20px;">GO</button>
                     </form>
                 </div>
-                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-                    <h5 class="ft-title">Contact</h5>
+                <div class="ft-sec3 col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                    <h5 class="ft-title">Contact :</h5>
 <!--                     <p style="padding-top: 20px; color: #777777"><a href='/about/'>About</a></p>
                     <p style="color: #777777"><a href='/blog/'>Blog</a></p>
                     <p style="color: #777777"><a href='/contact/'>Contact</a></p>	-->      
-                    <p>contact@ecovi.io</p>
-                    <p>Tel: 434-422-0950</p>      	    
+                    <p><img src="{% static "/pictures/phone.png" %}" style="width: 26px; height: 26px; margin-right: 12px;" >contact@ecovi.io</p>
+
+                    <p><img src="{% static "/pictures/email.png" %}" style="width: 26px; height: 26px; margin-right: 12px;" >434-422-0950</p>      	    
 				</div>
             </div>
         </div>
