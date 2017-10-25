@@ -81,22 +81,27 @@
 		/* "Our standard" row in homepage */
 		.container-standard {
 			display: flex;
-			border: 2px solid black;
-		}
+/*			border: 2px solid black;
+*/		}
 		.box {
-			background-color: #cc0042;
 			flex-basis: 250px;
 			flex-grow: 1;
 			padding: 20px;
 		}
-		.middle {
-			background-color: #b20039;
+		.start {
+			margin-left: 80px;
+			margin-bottom: 80px;
 		}
 		/*small screens*/
 		@media all and (max-width: 550px) {
 			.container-standard {
 				flex-direction: column;
 			}
+		}
+
+		.home-sec2 > h3 {
+			margin-left: 80px;
+			padding: 20px;
 		}
 		/* ------------------------------- */
 
@@ -121,11 +126,11 @@
 		}
 		#emailBtn {
 			border-radius: 30px;
-			background-image: linear-gradient(to right, #02AAB0 0%, #00CDAC 51%, #02AAB0 100%);
-			color: white;
+			background-image: linear-gradient(to right, #ECE9E6 0%, #FFFFFF 51%, #ECE9E6 100%);
+			color: #777777;
 			font-size: 15px;
 			height: 47px;
-			width: 75px;
+			width: 90px;
 			border: none;
 			position: absolute;
 			top: 0;
@@ -211,13 +216,13 @@
                 <div class="ft-sec1 col-xs-4 col-sm-4 col-md-4 col-lg-4">
                     <h5 style="padding-left: 20px; " class="ft-title"><b>Follow our community :</b></h5>
 					<a href='/linkedin/' style="margin-left: 20px">
-						<img src="{% static "/pictures/linkedin_logo_bw.png" %}" alt="Responsive image" class="img-circle" width="30" height="30" style='margin-right:15px'> 
+						<img src="{% static "/pictures/linkedin_logo_bw.png" %}" alt="Responsive image" class="img-circle" width="40" height="40" style='margin-right:15px'> 
 					</a> 
 					<a href='/facebook/'>
-						<img src="{% static "/pictures/facebook_logo_bw.png" %}" alt="Responsive image" class="img-circle" width="30" height="30" style='margin-right:15px'>
+						<img src="{% static "/pictures/facebook_logo_bw.png" %}" alt="Responsive image" class="img-circle" width="40" height="40" style='margin-right:15px'>
 					</a> 
 					<a href='/instagram/'>
-						<img src="{% static "/pictures/ins_logo_bw.png" %}" alt="Responsive image" class="img-circle" width="30" height="30">
+						<img src="{% static "/pictures/ins_logo_bw.png" %}" alt="Responsive image" class="img-circle" width="40" height="40">
 					</a> 
                 </div>
                 <div class="ft-sec2 col-xs-4 col-sm-4 col-md-4 col-lg-4">
