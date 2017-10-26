@@ -9,6 +9,7 @@
 
 	<div class="home-sec2">
 		<h3>How We Select Companies</h3>
+		<p class="typejs"></p>
 		<div class="container-standard">
 			<div class="box start">
 				<img src="{% static "/pictures/impact.png" %}" width="150" height="150"/>
@@ -28,7 +29,12 @@
 		</div>
 	</div>
 
+	<script type="text/javascript">
+		var typed = new Typed('.typejs', {
+		  strings: ["First sentence.", "Second sentence."],
+		  typeSpeed: 30
+		});
+	</script>
 
-	
 
 {% endblock %}
