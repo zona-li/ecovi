@@ -30,13 +30,6 @@
 		  	min-height: 1000px;
 		}
 		/*large screen*/
-		.navbar {
-			display: flex;
-			/*border: 10px solid black;*/
-			flex-flow: row wrap;
-			justify-content: space-between;
-			align-items: center;
-		}
 		.nav_section {
 			display: flex;
 			align-items: center;
@@ -51,9 +44,10 @@
 		@media all and (max-width: 500px) {
 			.nav_section {
 				flex-direction: column;
+				justify-content: center;
 			}
 		}
-		
+
 		.container-fluid {
 			padding-top: 40px;
 			padding-left: 100px;
@@ -110,7 +104,6 @@
 		#logoname {
 			text-decoration: none;
 			font-size: 25px;
-			margin-right: 30px;
 		}
 		#inputEmail {
 			border-radius: 30px;
@@ -190,18 +183,18 @@
 	<div class="bg">
 		<nav class="navbar">
 			<div class="nav_section">
-				<img src="{% static "/pictures/logo.png" %}" alt="LOGO" width="50" height="50"/>
+				<img src="{% static "/pictures/logo.png" %}" style="margin-left: 35px;" alt="LOGO" width="50" height="50"/>
 				<a id="logoname" href='/'>EcoVi</a>
-				<a class="header-nav" href='/product/'><button type="button" class="btn btn-link btn-lg">FOOD</button></a>
+				<a class="header-nav" href='/product/' style="margin-left: 35px;"><button type="button" class="btn btn-link btn-lg">FOOD</button></a>
 				<a class="header-nav" href='/product/'><button type="button" class="btn btn-link btn-lg">CLOTHES</button></a>
 				<a class="header-nav" href='/product/'><button type="button" class="btn btn-link btn-lg">HOUSE</button></a>
 				<a class="header-nav" href='/product/'><button type="button" class="btn btn-link btn-lg">EXPERIENCE</button></a>
 
 			</div>
-			<div class="nav_section">
+			<!-- <div class="nav_section">
 				<a class="header-nav" href='/homeowners/signup/'><button type="button" class="btn btn-link btn-lg">Sign up</button></a>
 				<i id="like-button" class="fa fa-2x fa-heart-o not-liked"></i>
-			</div>
+			</div> -->
 			
 		</nav>
 		<div class="home-all">
@@ -241,9 +234,9 @@
 <!--                     <p style="padding-top: 20px; color: #777777"><a href='/about/'>About</a></p>
                     <p style="color: #777777"><a href='/blog/'>Blog</a></p>
                     <p style="color: #777777"><a href='/contact/'>Contact</a></p>	-->      
-                    <p><img src="{% static "/pictures/phone.png" %}" style="width: 26px; height: 26px; margin-right: 12px;" >contact@ecovi.io</p>
+                    <p><img src="{% static "/pictures/phone.png" %}" style="width: 26px; height: 26px; margin-right: 12px;" >434-422-0950</p>
 
-                    <p><img src="{% static "/pictures/email.png" %}" style="width: 26px; height: 26px; margin-right: 12px;" >434-422-0950</p>      	    
+                    <p><img src="{% static "/pictures/email.png" %}" style="width: 26px; height: 26px; margin-right: 12px;" >contact@ecovi.io</p>      	    
 				</div>
             </div>
         </div>
