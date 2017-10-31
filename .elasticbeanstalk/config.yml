@@ -1,6 +1,6 @@
 branch-defaults:
   master:
-    environment: null
+    environment: ecovi-dev
     group_suffix: null
 global:
   application_name: ecovi
