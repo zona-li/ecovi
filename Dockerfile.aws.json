@@ -1,4 +1,4 @@
 {
-  "AWSEBDockerrunVersion": "1",
+  "AWSEBDockerrunVersion": "2",		 // For multicontainer Docker environments
   "Logging": "/var/eb_log"
 }
