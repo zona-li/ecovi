@@ -32,4 +32,4 @@ web:
       - "8000:8000"
    volumes:
       - ~/Desktop/pentagon/app:/app
-   command: bash -c "pip install -r /app/requirements.txt && python /app/homestarter/manage.py makemigrations && python /app/homestarter/manage.py migrate && mod_wsgi-express start-server --working-directory /app/homestarter/ /app/homestarter/homestarter/wsgi.py"
+   command: bash -c "pip install -r /requirements.txt && python /app/homestarter/manage.py makemigrations && python /app/homestarter/manage.py migrate && mod_wsgi-express start-server --working-directory /app/homestarter/ /app/homestarter/homestarter/wsgi.py"
