@@ -9,7 +9,7 @@ RUN apt-get update && \
             rm -r /var/lib/apt/lists/*
 
 RUN pip install --upgrade pip \ 
-	&& pip install "django==1.10" \ 
+	&& pip install "django==1.11" \ 
 	&& pip install "mysqlclient==1.3.8" \
 	&& pip install "kafka-python<=1.0" \
 	&& pip install "elasticsearch<3.0"
@@ -19,5 +19,3 @@ ENV LANG=en_US.UTF-8 PYTHONHASHSEED=random \
     MOD_WSGI_USER=www-data MOD_WSGI_GROUP=www-data
 
 WORKDIR /app
-
-EXPOSE 80
