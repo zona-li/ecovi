@@ -1,31 +1,6 @@
-# version: "2"
-# services:
-  
-#   web:
-#     container_name: ecovi_web
-#     # build: .
-#     image: tp33/django
-#     ports:
-#       - "8000:8000"
-#     links:
-#       - "database:db"
-#     volumes:
-#       - ./app:/app
-#     command: bash -c "pip install -r /app/requirements.txt && python /app/homestarter/manage.py makemigrations && python /app/homestarter/manage.py migrate && mod_wsgi-express start-server --working-directory /app/homestarter/ /app/homestarter/homestarter/wsgi.py"
-  
-#   database:
-#     image: mysql
-#     ports:
-#       - "8001:3306"
-#     environment:
-#       MYSQL_ROOT_PASSWORD: mypsw
-#       MYSQL_DATABASE: ecovi
-#       MYSQL_USER: zona
-
-
 web:
    container_name: ecovi_web
-   image: django
+   image: zonali/django
    external_links:
       - mysql:db
    ports:
