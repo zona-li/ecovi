@@ -1,8 +1,16 @@
+# db:
+#   image: mysql:5.7.17
+#   container_name: mysql_db
+#   volumes:
+#     - ~/Desktop/pentagon/db:/var/lib/mysql
+#   environment:
+#     MYSQL_ROOT_PASSWORD: "somepsw"
+
 web:
-   container_name: ecovi_web
    image: zonali/django
+   container_name: web
    external_links:
-      - mysql:db
+      - "mysql:db"
    ports:
       - "8000:8000"
    volumes:
