@@ -1,6 +1,6 @@
 # EcoVi
 
-The website matches trustworthy local constructors/designers with project owners who want to build or rennovate thier real estate properties.
+The website discovers and markets the best and most responsible products and companies that are building towards a sustainable future or lifestyle.
 
 Features
 ------------
