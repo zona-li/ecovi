@@ -24,4 +24,4 @@ EXPOSE 8002
 
 WORKDIR /app
 
-CMD ["sh", "./start.sh"]
+CMD supervisord -c /app/homestarter/supervisord.conf
