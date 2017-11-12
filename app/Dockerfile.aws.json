@@ -5,10 +5,10 @@
     "Update": "true"
   },
   "Ports": [
-    {
-      "ContainerPort": "80"
-    }
-  ],
+   {
+   "ContainerPort": "8002",
+   }
+ ],
   "Volumes": [
     {
       "ContainerDirectory": "/var/app",

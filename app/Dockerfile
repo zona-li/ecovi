@@ -1,41 +1,27 @@
-FROM ubuntu:16.04
+FROM grahamdumpleton/mod-wsgi-docker:python-3.5
 
 RUN apt-get update && \
             apt-get install -y --no-install-recommends git \
-            python3 \
-            python3-pip \
-            python3-dev \
-            python3-setuptools \
+            python-pip \
+            python-dev \
             supervisor \
-            nginx \
             libmysqlclient-dev \
             unattended-upgrades && \
-            pip3 install -U pip setuptools && \
-            rm -r /var/lib/apt/lists/*    
+            rm -r /var/lib/apt/lists/*
 
-RUN pip3 install uwsgi \
-      && pip3 install "mysqlclient==1.3.8"
+ADD . /app
 
+ADD requirements.txt /app/requirements.txt
+RUN cd /app && pip install -r /app/requirements.txt
 
-# setup all the config files
-RUN echo "daemon off;" >> /etc/nginx/nginx.conf
-COPY nginx-app.conf /etc/nginx/sites-available/default
-COPY supervisor-app.conf /etc/supervisor/conf.d/
+RUN pip install --upgrade pip \ 
+      && pip install "django==1.11" \ 
+      && pip install "mysqlclient==1.3.8" \
+      && pip install "kafka-python<=1.0" \
+      && pip install "elasticsearch<3.0"
 
-# COPY requirements.txt and RUN pip install BEFORE adding the rest of your code, this will cause Docker's caching mechanism
-# to prevent re-installing (all your) dependencies when you made a change a line or two in your app.
-
-COPY app/requirements.txt /home/docker/code/app/
-RUN pip3 install -r /home/docker/code/app/requirements.txt
-
-# add (the rest of) our code
-COPY . /home/docker/code/
+EXPOSE 8002
 
 WORKDIR /app
 
-EXPOSE 80
-CMD ["supervisord", "-n"]
-
-
-
-
+CMD ["sh", "./start.sh"]
