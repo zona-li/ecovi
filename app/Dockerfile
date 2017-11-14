@@ -12,7 +12,6 @@ RUN apt-get update && \
 ADD . /app
 
 ADD requirements.txt /app/requirements.txt
-RUN cd /app && pip install -r /app/requirements.txt
 
 RUN pip install --upgrade pip \ 
       && pip install "django==1.11" \ 
