@@ -12,7 +12,7 @@ Features
 Installation
 ------------
 
-Run: "docker-compose up" in Terminal
+Run `docker-compose up` in Terminal
 
 App Structure
 ------------
@@ -61,7 +61,7 @@ Business Tools:
 Contribute
 ------------
 
-- Source Code: https://github.com/ZonaClark/homestarter.git
+- [Source Code](https://github.com/ZonaClark/homestarter.git)
 
 Support
 ------------
