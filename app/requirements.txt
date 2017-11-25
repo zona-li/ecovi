@@ -1,3 +1,2 @@
 python-decouple
 djangorestframework
-gunicorn==19.7
