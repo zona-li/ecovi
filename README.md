@@ -1,13 +1,12 @@
-# EcoVi
+# ecovi
 
 The website discovers and markets the best and most responsible products and companies that are building towards a sustainable future or lifestyle.
 
 Features
 ------------
 
-- Search
 - Sign up and sign in with email confirmation
-- List of people to work with and products to buy
+- Featured companies/products
 
 Installation
 ------------
@@ -17,9 +16,8 @@ Run `docker-compose up` in Terminal
 App Structure
 ------------
 
-* Project name: homestarter
-* Django apps: main, search
-* REST API app: api
+* Project name: ecovi
+* Django apps: main, api
 
 
 
