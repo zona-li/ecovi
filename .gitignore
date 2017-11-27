@@ -4,3 +4,4 @@ other
 migrations/*
 db/*
 *.log
+*.zip
